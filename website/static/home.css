@@ -1,0 +1,11 @@
+.jumbotron{
+    background-image: url(header_background.png);
+}
+
+h1 {
+    font-size: 90vw;
+    margin: 0;
+    font-family: "arial black", Medium;
+    font-style: italic;
+    position: relative;
+}
