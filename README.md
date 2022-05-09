@@ -9,9 +9,12 @@ Three easy steps to have fun while learning:
 2. Without knowing the pre-written story at all, you blindly fill in the blanks with fun words, verbs, adjectives, etc.
 3. Read the hilarious story aloud! It is customized and riddled with words you had just filled in. An absolutely hilarious experience, and an effective way to educate yourself about the danger of cyber attacks.
 
-# Setup: clone repository
+# Setup
 ```
 git clone <repo-url>
+```
+```
+pip install -r requirements.txt
 ```
 
 # Running the application
