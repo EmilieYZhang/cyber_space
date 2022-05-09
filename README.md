@@ -27,6 +27,9 @@ python main.py
 http://127.0.0.1:5000
 ```
 
+# Alternative to viewing application
+Visit: https://cyberspacehackathon.azurewebsites.net
+
 # extra information
 - Cyber_Space was created for the Secureworks hackathon.
 - All images used in the project belongs to their respective copyright holders, sources are provided in the home.html source code file.
