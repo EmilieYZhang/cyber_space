@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}Black Friday Horror Story{% endblock %}
+
+{% block content %} 
+{% if complete_bool == False %}
+<div class="container">
+<br>
+<h1> Black Friday Horror Story </h1>
+<br>
+<form method="POST">
+    <h5> Enter an adjective: </h5>
+    <textarea name="s1_adj1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a number bewteen 1-99: </h5>
+    <textarea name="s1_num1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a Social Media platform: </h5>
+    <textarea name="s1_soc1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a Celebrity: </h5>
+    <textarea name="s1_cel1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a product in plural: </h5>
+    <textarea name="s1_pro1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter an adjective: </h5>
+    <textarea name="s1_adj2" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a number: </h5>
+    <textarea name="s1_num2" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a plural noun: </h5>
+    <textarea name="s1_plunoun1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a bodypart in plural: </h5>
+    <textarea name="s1_body1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a store brand: </h5>
+    <textarea name="s1_store1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a silly word: </h5>
+    <textarea name="s1_silly1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a negative emotion: </h5>
+    <textarea name="s1_emo1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter an adjective: </h5>
+    <textarea name="s1_adj3" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a large number: </h5>
+    <textarea name="s1_num3" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a verb ending in -ing: </h5>
+    <textarea name="s1_verb1" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a number: </h5>
+    <textarea name="s1_num4" id="note" class="form-control"></textarea>
+    <br>
+    <h5> Enter a plural noun: </h5>
+    <textarea name="s1_plunoun2" id="note" class="form-control"></textarea>
+    <br>
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Done</button>
+    </div>
+    <br>
+</form>
+</div>
+{% endif %}
+
+{% if complete_bool == True %}
+<div class="container">
+<br>
+<h1> Black Friday Horror Story </h1>
+<br>
+<p>
+    Today is a <b>{{array[0]}}</b> Black Friday afternoon in the year 20<b>{{array[1]}}</b>.
+    As I am looking through <b>{{array[2]}}</b>, I see that <b>{{array[3]}}</b>
+    had just released their <b>{{array[4]}}</b> series yesterday! They were <b>{{array[5]}}</b>, 
+    and very exclusive. They were rumored to be sold for over <b>{{array[6]}}</b> million 
+    <b>{{array[7]}}</b>! I could not wait to get <b>{{array[8]}}</b> on them. So without hesitation, 
+    I was quick to purchase it on <b>{{array[9]}}</b>’s website. To my horror, these exclusive <b>{{array[4]}}</b> 
+    were so exclusive that they were sold out before I had the chance to say “<b>{{array[10]}}</b>” 
+    two times fast. I was absolutely <b>{{array[11]}}</b>. Just then, a flashy adverstisement appeared 
+    as I kept browsing through the web. I saw that a company was giving these exclusive 
+    <b>{{array[3]}}</b> <b>{{array[4]}}</b> for FREE! I let out a <b>{{array[12]}}</b> cry as I immediately made an order. 
+    Turns out, they were not exactly free. I had to fill out a form with my personal data and 
+    I paid a shipping fee of <b>{{array[13]}}</b> dollars before I could redeem my reward. I did not think 
+    much of it because I was already <b>{{array[14]}}</b> with joy.
+    <br>
+    To my horror, I NEVER received the <b>{{array[3]}}</b>’s <b>{{array[4]}}</b> package 
+    that they had promised. Worst of all, I found out that someone got access to my bank account 
+    and bought <b>{{array[15]}}</b> <b>{{array[16]}}</b> under my name before I could stop them.    
+</p>
+<br>
+<b><i>
+    Useful tip:<br>
+    If something you see on the web is too good to be true, it most likely is.
+    Scams are known to spike during holiday sales, such as during Black Friday or Cyber Monday.
+    Be cautious of online scams or fraudulent deals when shopping. Always check credibility before you decide 
+    to purchase from any unfamiliar websites.
+    Here is a <a href="https://us.norton.com/internetsecurity-online-scams-black-friday-scams.html"> useful article from Norton</a> 
+    if you would like to learn more about these potential scams.
+</b></i>
+<br>
+<br>
+<a href="/story1" class="btn btn-primary">Replay</a>
+<br>
+<br>
+</div>
+{% endif %}
+{% endblock %}

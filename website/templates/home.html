@@ -1,0 +1,73 @@
+<!-- Images from 
+    Banner Image:
+    https://www.cybintsolutions.com/cyber-security-facts-stats/
+    
+    1st Story Card Image:
+    https://www.usatoday.com/story/money/reviewed/2021/11/09/black-friday-2021-shop-deals-walmart-target-and-more/6345650001/
+
+    2nd Story Card Image:
+    https://www.istockphoto.com/videos/hacker-cartoon
+
+    3rd Story Card Image:
+    https://www.linkedin.com/pulse/security-public-wifi-trung-tang/
+
+-->
+<link
+      rel="stylesheet"
+      href="../static/home.css"
+    />
+{% extends "base.html" %}
+{% block title %}Cyber_Space{% endblock %}
+<!-- Note that this is python code between the curly brackets-->
+
+{% block content %} 
+<br>
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4" style="color: white;">CYBER_SPACE</h1>
+        <p class="lead" style="color: white";>Get equipped with weapons to defend yourself from cyber threats!<br>
+            Cyber_Space features 3 exclusive fill-in stories to have fun while learning about cybersecurity.
+        </p>
+      </div>
+</div>
+<br>
+<div class="container">
+    <div class="card-deck">
+
+        <div class="card" style="width: 45 px;">
+            <img class="card-img-top" src="static/BlackFridayCard.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Black Friday Horror Story</h5>
+              <p class="card-text">It's Black Friday! Things are cheaper than ever. 
+                  But be careful, you might be losing more money than you are saving!</p>
+              <a href="/story1" class="btn btn-primary">Play Now</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 45 px;">
+            <img class="card-img-top" src="static/hackerCard.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Hacked</h5>
+              <p class="card-text">You create your first social media account.
+                  But your bad cyber habits costs your account to get hacked!
+              </p>
+              <a href="/story2" class="btn btn-primary">Play Now</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 45 px;">
+            <img class="card-img-top" src="static/Public_Wifi.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">The Public Wifi Incident</h5>
+              <p class="card-text">It is a beautiful Sunday afternoon, you decide to make a visit to your favourite shop.
+                  Unfortunately, a mischievious public network hacker also had the same plans.
+              </p>
+              <a href="/story3" class="btn btn-primary">Play Now</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<br>
+{% endblock %}

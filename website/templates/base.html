@@ -1,0 +1,142 @@
+<!-- # base template is the theme of the website -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <title>{% block title %}Cyber_Space{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" id="home" href="/">Cyber_Space</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- This code below is to flash message if user enters wrong entries -->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div>{% block content %} {% endblock %}</div>
+
+    <!-- Footer -->
+<footer class="page-footer font-small blue pt-4" style = "background-color: #d1d1d1;">
+    <div class = "container">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+    
+        <!-- Grid row -->
+        <div class="row">
+    
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+    
+            <!-- Content -->
+            <h5 class="text-uppercase">Cybersecurity Ressources</h5>
+            <p>Here you can find more ressources to educate yourself. <br>
+            Now more than ever, it is important to be cybersecure.</p>
+    
+          </div>
+          <!-- Grid column -->
+    
+          <hr class="clearfix w-100 d-md-none pb-3">
+    
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+    
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+    
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.commonsensemedia.org/articles/what-is-digital-literacy" style = "color: darkblue;">What is Digital Literacy? </a>
+              </li>
+              <li>
+                <a href="https://www.unicef.org/globalinsight/documents/digital-literacy-children-10-things-know#:~:text=Digital%20literacy%20goes%20beyond%20technical,and%20learning%20through%20digital%20technologies" style = "color: darkblue;">
+                    UNICEF on Digital Literacy</a>
+              </li>
+              <li>
+                <a href="https://www.getcybersafe.gc.ca/en/blogs/cyber-security-kids-how-parents-can-talk-their-children" style = "color: darkblue;">
+                    A Parent's Guide to Cybersecurity</a>
+              </li>
+              <li>
+                <a href="https://www.stopbullying.gov/" style = "color: darkblue;">Preventing Cyberbullying</a>
+              </li>
+            </ul>
+    
+          </div>
+          <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+    
+      </div>
+      <!-- Footer Links -->
+    
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2022 Secureworks Cybersecurity Literacy Challenge:
+        <a href="/"> Cyber_Space</a>
+      </div>
+      <!-- Copyright -->
+    </div>
+</footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+  </body>
+</html>
